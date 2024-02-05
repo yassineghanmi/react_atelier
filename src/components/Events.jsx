@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import Event from "./Event";
 import { useEffect, useState } from "react";
@@ -28,10 +29,13 @@ function Events() {
   const handleBookEvent = async (eventId) => {
     try {
       const updatedData = data.map((item) =>
+      
         item.id === eventId
           ? { ...item, nbParticipants: item.nbParticipants + 1, nbTickets: item.nbTickets - 1 }
           : item
+          
       );
+      
       setData(updatedData);
     } catch (error) {
       console.error("Error booking event:", error);
