@@ -1,9 +1,13 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Events from "./components/Events";
+import Home from "./components/Home";
 function App() {
-  
   return (
-    <Events></Events>
+    <Routes>
+      <Route path="/home" element={<Home />}>
+        {" "}
+      </Route>
+    </Routes>
   );
 }
 
